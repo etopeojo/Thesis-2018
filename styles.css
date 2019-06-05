@@ -1,0 +1,207 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	/*Original height 100vh*/
+	height: 100vh;
+	display:flex;
+	/*background: #060AB2;*/
+	background: linear-gradient(160deg, rgb(143, 22, 237), rgb(27, 141, 15));
+    /*background:linear-gradient(57deg,#e36f53,#fa5ae0);*/
+	/*font-family: 'Permanent Marker', cursive;*/
+	/*font-size: 24px;*/
+}
+
+.memory-game{
+	/*original 640px*/
+	width: 800px; 
+	height: 550px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+	/*background: #ffffff;*/
+	/*border-radius: 5px;*/
+}
+
+.memory-card{
+
+	/*width: calc(25% - 10px) 40px;*/
+	/*height: calc(33.333% - 10px) 70px;*/
+	width: calc(22% - 25px);
+	height: calc(33.333% - 50px);
+	/*margin: 5px;*/
+	margin: 3px auto;
+	position: relative;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+}
+
+
+.front-face,
+.back-face{
+	width:100%;
+	height: 100%;
+	padding: 20px;
+	position: absolute;
+	border-radius: 5px;
+	/*background: #1C7CCC;*/
+	background: #43645C;
+	backface-visibility: hidden;
+}
+
+.front-face-image{
+	width:100%;
+	height:100%;
+	position: relative;
+	top:-30px;
+	/*padding: 20px;*/
+	/*position: absolute;*/
+	/*border-radius: 5px;*/
+	/*background: #1C7CCC;*/
+	backface-visibility: hidden;
+}
+
+h3{
+	font-family: 'Gloria Hallelujah', cursive;
+	/*font-size: 0.85em;*/
+	top:-30px;
+	position: relative;
+}
+
+.panel{
+	/*width: 100%;*/
+	width:750px;
+	justify-self: flex-start;
+	display: flex;
+	justify-content: space-between;
+	height: 7%;
+	/*text-align: center;*/
+	position: relative;
+	margin: auto;
+	/*font-family: 'Gloria Hallelujah', cursive;*/
+}
+.timer{
+	font-size: 40px;
+}
+.title{
+	font-size: 25px;
+	align-self: center;
+	justify-content: center;
+	width: 400px;
+}
+
+.UQLogo{
+	width: 180px;
+	height: 55px;
+	margin-top: -20px;
+	/*padding: 20px;*/
+	/*position: relative;*/
+}
+
+.front-face{
+	transform: rotateY(180deg);
+}
+
+.memory-card:active{
+	transform: scale(0.97);
+	transition: transform .2s;
+}
+
+.memory-card.flip{
+	transform: rotateY(180deg);
+}
+
+
+/*Styles for the Congrats and testing Modal*/
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {''
+	margin: 70px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+  
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+/*#starRating li {
+	display: inline-block;
+}*/
+
+#test-link {
+	/*background-color: #141214;*/
+	background-color: #6E7E78;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor:pointer;
+}
+
+#test-link:hover{
+	background-color: #141214;
+	transform: scale(1.01);
+}
+#test-link:active{
+	transform: scale(1.1);
+}

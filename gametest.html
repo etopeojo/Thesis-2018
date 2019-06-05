@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="gametestStyles.css">
+</head>
+<body>
+	<header class = "main-header">
+		<h1 class="title">Test Me!</h1>
+
+		<div class="controls">
+	      <div class="instruction">Get tested by matching the first picture with its word meaning</div>
+	      <div class="score">Score: <span>0</span>
+	     </div>
+
+	     <!-- <div class="control-set">
+	        <div class="timer">0</div>
+	        <button type="button" name="start">Start!</button>
+      	</div> -->
+	</header>
+
+	<div class="game">
+		<div id="memory_board"></div>
+		<div id="words_button"></div>
+	</div>
+
+
+	<div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>End of game</h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Thank you for your time
+                </div>
+                <!-- <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <!-- <p>Rating:  <span id=starRating></span></p> -->
+                </div> -->
+                <!-- button id="test-link"onclick="linktoTest()">
+                    Let's Get Tested 😄</a>
+                </button> -->
+            </div>
+        </div>
+    </div>
+<script src="gametestScripts.js"></script>
+</body>
+</html>

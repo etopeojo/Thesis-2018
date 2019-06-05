@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700|Gloria+Hallelujah|Rammetto+One');
+
+* {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(160deg, rgb(143, 22, 237), rgb(27, 141, 15));
+  background:linear-gradient(57deg,#e36f53,#fa5ae0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.title {
+  width: 325px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 48px;
+  color: #f7e376;
+  transform: rotate(-25deg);
+}
+
+.controls {
+  font-family: 'Rammetto One', cursive;
+  font-size: 30px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*position: absolute;*/
+  top: 30px;
+}
+
+.controls .score {
+  margin-bottom: -100px;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+
+.controls .instruction {
+  /*width: 65px;*/
+  font-size: 18px;
+  margin-bottom: -130px;
+  text-indent: -500px;
+
+}
+
+.control-set {
+  display: flex;
+}
+
+.controls button[name='start'] {
+  width: 100px;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #36C3C3;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  line-height: 3;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.controls button[name='start']:hover {
+  background: #20bcbc;
+}
+
+.controls button[name='start']:active {
+  transform: scale(1.1);
+}
+
+.game {
+  width: 750px;
+  width: 70vw;
+  height: 70vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+*/
+div#memory_board{
+	/*background:#CCC;*/
+	/*border:#999 1px solid;*/
+	width:1200px;
+	height:130px;
+	padding:24px;
+	margin:0px auto;
+}
+div#memory_board > div{
+	/*background: url(tile_bg.jpg) no-repeat;*/
+	background: url(img/vue.svg) no-repeat;
+	border:#000 1px solid;
+	width:100px;
+	height:100px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	/*cursor:pointer;*/
+	text-align:center;
+}
+
+div#words_button > button[name='gamebutton']{
+  width: 150px;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: -1000px;
+  background: #36C3C3;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  /*line-height: 3;*/
+  cursor:pointer;
+  text-align:center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+div#words_button > button[name='gamebutton']:hover {
+  background: #20bcbc;
+}
+
+div#words_button > button[name='gamebutton']:active {
+  transform: scale(1.1);
+}
+
+
+/*Styles for the Congrats and testing Modal*/
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {''
+	margin: 70px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+  
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+/*#starRating li {
+	display: inline-block;
+}*/
+
+
+
+
