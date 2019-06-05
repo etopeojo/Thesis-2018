@@ -23,18 +23,18 @@ let word_LogCount = new Map();
 
 
 // DEVELOPER MODE TO SHOW ALL CARDS AT ONCE
-(function allflip(){
-	if(developermode){
-		cards.forEach(card =>{
-			card.classList.add('flip');
-		});
+// (function allflip(){
+// 	if(developermode){
+// 		cards.forEach(card =>{
+// 			card.classList.add('flip');
+// 		});
 
-		moves = 45;
-		totalTimePlayed = 86;
-		congratulations(totalTimePlayed);
-		developWordCount();
-	}
-})();
+// 		moves = 45;
+// 		totalTimePlayed = 86;
+// 		congratulations(totalTimePlayed);
+// 		developWordCount();
+// 	}
+// })();
 
 
 /*FlipCard*/
